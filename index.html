@@ -577,11 +577,11 @@ function initChat() {
 
 async function callAI(msg) {
   history.push({ role: "user", content: msg });
-  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+  const res = await fetch("https://groq-proxy.mukulupmanyu5.workers.dev/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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"
+      
     },
     body: JSON.stringify({
       model: "llama-3.3-70b-versatile",
